@@ -1,0 +1,3 @@
+#LOCAL_DB = mongodb://localhost:27017/grad_db
+JWT_SECRET = skjfgvdrjghi45h9v358tjm395thu03498uoericmvjom53908tu34ujifc3927ry0uhfvm 
+DATABASE = mongodb+srv://makaveli:makaveli@cluster0.mnwwy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

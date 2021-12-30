@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>HOW IT WORKS</h1>
+    <h1>Base url: https://pacavel-m-api.herokuapp.com</h1>
+    <li>POST baseurl/v1/user/register -- accepts req.body { email } to register 
+        <br>
+        response -> { message: String, status: Boolean }
+    </li>
+    <li>POST baseurl/v1/user/login -- accepts req.body { email } to login, an email will sent will the url to login 
+        <br>
+        response -> { message: String, status: Boolean, token }, store token for recurrent authorisation
+    </li>
+    
+    <li> from the email -> baseurl/v1/user/verify-user-login?token=token 
+        <br>
+        response -> { message: String, status: Boolean }
+        note: this will redirect to your domain
+    </li>
+
+    <li> from the email -> baseurl/v1/user/verify-user-access -- accepts headers: { "x-access-token" : token } <i>stored token</i>
+        <br>
+        response -> { message: String, status: Boolean }
+    </li>
+    <b>contact the developer for more info `\_('_')_/`</b>
+</body>
+</html>
